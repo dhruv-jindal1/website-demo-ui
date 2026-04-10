@@ -1,0 +1,254 @@
+.import-calendar-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.import-calendar-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.import-calendar-page__eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.import-calendar-page__title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.1;
+}
+
+.import-calendar-page__subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 650px;
+}
+
+.import-calendar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.import-calendar-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.import-calendar-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: var(--color-bg);
+}
+
+.import-calendar-step__badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.import-calendar-step__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.import-calendar-step__content h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.import-calendar-step__content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.import-calendar-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.import-calendar-event-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.import-calendar-event-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.import-calendar-event-card input {
+  margin-top: 4px;
+  accent-color: var(--color-primary);
+}
+
+.import-calendar-event-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.import-calendar-event-card__info strong {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.import-calendar-event-card__info span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.import-calendar-empty {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px dashed var(--color-border);
+  background: var(--color-surface);
+}
+
+.import-calendar-empty p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.import-calendar-sidecard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.import-calendar-sidecard h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.import-calendar-sidecard ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+.import-calendar-btn {
+  align-self: flex-start;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.import-calendar-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+.import-calendar-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.import-calendar-btn--secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+}
+
+.import-calendar-btn--ghost {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.import-calendar-btn--ghost:hover:not(:disabled) {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.import-calendar-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.import-calendar-error p {
+  margin: 0;
+}
+
+.import-calendar-error button {
+  background: none;
+  border: none;
+  color: #b91c1c;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+@media (max-width: 980px) {
+  .import-calendar-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .import-calendar-page__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
